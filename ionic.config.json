@@ -1,5 +1,7 @@
 {
   "name": "EffectiveWaffle",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "vue-vite"
 }
