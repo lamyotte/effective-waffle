@@ -1,5 +1,5 @@
 <template>
-    <ion-button color="secondary" @click="() => takePhoto(id)" :class="{ bruh: !!photo }">
+    <ion-button color="secondary" @click="() => takePhoto(id)" :class="{ active: !!photo }">
         <ion-img v-if="photo" :src="photo.webviewPath"></ion-img>
         <div v-else>{{ name }}</div>
     </ion-button>
@@ -14,7 +14,6 @@ import { usePhotoGallery } from '@/composables/usePhotoGallery';
 
 
 const { takePhoto, photo } = usePhotoGallery();
-console.log(photo)
 </script>
 
 <style scoped>
@@ -36,7 +35,7 @@ ion-button img {
     display: block;
 }
 
-ion-button.bruh {
+ion-button.active {
     background-color: #D3C4D1;
 }
 </style>
